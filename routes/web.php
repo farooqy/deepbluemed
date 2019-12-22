@@ -23,7 +23,7 @@ Route::get('/services', 'main\IndexPageController@openServiceIndexPage')->name('
 //Admin
 Route::get('/admin', 'admin\mainController@openIndexPage')->name('adminIndexPage');
 
-Auth::routes();
+Auth::routes(["register" => false]);
 
 Route::prefix('admin')->group(function () {
     Route::get('home/newbanner', function(){return comingsoon();});
